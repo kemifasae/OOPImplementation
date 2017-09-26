@@ -1,12 +1,13 @@
-const myapp = require('../Account.js','../wages.js', '../salaried.js' );
+const myapp = require('../Account.js'); 
+//const myapp = require('../salaried.js');
 //const should = require('chai').should;
 //let assert = require('chai').assert;
 const expect = require('chai').expect; 
 
 describe("Salaried Employee", function(){
     it("should return $3000", function(){
-        var Salemp = new Salaried("bob", "tunde", "005");
-        expect(Salemp.getSalary()).toEqual('$3000');
+        var emp = new Employee("bob", "tunde", "005", "Salaried");
+        expect(Salemp.getCode()).toEqual('005');
     });
 
     it("should give return 200", function(){

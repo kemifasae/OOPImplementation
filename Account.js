@@ -1,4 +1,3 @@
-'use strict';
 
 class Employee{
     
@@ -18,20 +17,27 @@ class Employee{
     }
     getType(){
         return type;
-    }
-    getSalary(){
-        if (this.type === 'Salaried'){
-            this.pay = "$3000";
-        }
-        return this;
-    }
-    getWage(hours){
-        if(this.type==='Wages'){
-            this.pay = hours*50
-        }
-        return this;
-    }
-    
+    }    
 }
 
-export default Employee; 
+class Salaried extends Employee{
+    constructor(firstname,lastname, empcodeno,type){
+        super(firstname,lastname, empcodeno,'Salaried');
+    }
+    getSalary(){
+        return "$3000"
+    }
+}
+
+class Wages extends Employee{
+    
+    constructor(firstname,lastname, empcodeno,type,hours){
+        super(firstname,lastname, empcodeno,'Wages');
+        this.hours=hours;
+    }
+
+    getWages(){
+        let val = hours*50
+        return val;
+    }
+}

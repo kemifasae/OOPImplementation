@@ -1,13 +1,15 @@
-import Employee from "./Account";
+import Employee from './Account';
 
 class Wages extends Employee{
     
-    constructor(firstname,lastname, empcodeno){
+    constructor(firstname,lastname, empcodeno,type,hours){
         super(firstname,lastname, empcodeno,'Wages');
+        this.hours=hours;
     }
+
     getWages(){
-        return super.getWage(hours);
+        let val = hours*50
+        return val;
     }
 }
 
-export default Wages;
