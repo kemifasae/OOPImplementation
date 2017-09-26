@@ -1,0 +1,18 @@
+{
+  "name": "oopimplement-andela",
+  "version": "1.0.0",
+  "description": "TO implement object oriented programming",
+  "main": "Account.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "\"mocha test/employeeTest.js\""
+  },
+  "author": "Oluwakemi",
+  "license": "ISC",
+  "dependencies": {
+    "chai": "^4.1.2",
+    "mocha": "^3.5.3"
+  }
+}
